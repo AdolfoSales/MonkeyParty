@@ -3,13 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OptionsSceneManager : MonoBehaviour
+public class OptionsSceneManager : SceneManagerBase
 {
-
-    [SerializeField]
-    private Button graphicsButton, soundsButton, backButton;
-
-
     private void Awake()
     {
         SetButtons();
@@ -17,23 +12,28 @@ public class OptionsSceneManager : MonoBehaviour
 
     private void SetButtons()
     {
-        graphicsButton.onClick.RemoveAllListeners();
-        graphicsButton.onClick.AddListener(
+        buttonsYAxis[0].onClick.RemoveAllListeners();
+        buttonsYAxis[0].onClick.AddListener(
             delegate ()
             {
                 //GameManager.instance.LoadScene(SCENE.SELECTOR);
             });
-        soundsButton.onClick.RemoveAllListeners();
-        soundsButton.onClick.AddListener(
+        buttonsYAxis[1].onClick.RemoveAllListeners();
+        buttonsYAxis[1].onClick.AddListener(
            delegate ()
            {
                
            });
-        backButton.onClick.RemoveAllListeners();
-        backButton.onClick.AddListener(
+        buttonsYAxis[2].onClick.RemoveAllListeners();
+        buttonsYAxis[2].onClick.AddListener(
             delegate ()
             {
                 GameManager.instance.LoadScene(SCENE.MAIN);
             });
+    }
+
+    protected override void StartEnter()
+    {
+        //print("Start");
     }
 }

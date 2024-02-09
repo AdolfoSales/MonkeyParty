@@ -42,16 +42,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(SCENE _sCENE)
     {
-        cURRENT_sCENE = _sCENE;
-        if (pREV_sCENE == SCENE.NULL)
-        {
-            SceneManager.LoadScene((int)_sCENE);
-        }
-        else
-        {
-            SceneManager.LoadScene((int)pREV_sCENE);
-            pREV_sCENE = SCENE.NULL;
-        }
+        SceneManager.LoadScene((int)_sCENE);
     }
 
     public void BackScene(SCENE _sCENE)
