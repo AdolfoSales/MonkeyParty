@@ -106,7 +106,8 @@ public class PlayerControllerV02 : MonoBehaviour
             {
                 transform.position = Vector3.MoveTowards(transform.position, nextCellTarget, _moveSpeed * Time.deltaTime);
             }
-            
+              
+
 
             yield return null; // Wait for the next frame
         }
