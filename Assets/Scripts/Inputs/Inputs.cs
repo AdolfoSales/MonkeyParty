@@ -15,6 +15,8 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
+//clase que autogenera por unity cuando hemos utilizado la clase input system. Contiene los diferentes inputs que utilizamos
+//se genera solo cuando creo el input (clic derecho / create / input action), interpretacion del input accions
 public partial class @Inputs: IInputActionCollection2, IDisposable
 {
     public InputActionAsset asset { get; }
@@ -237,7 +239,7 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""6a092b76-2c62-4a89-85a8-21624bcaef91"",
-                    ""path"": ""<Gamepad>/start"",
+                    ""path"": ""<Keyboard>/enter"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""GamePad"",
@@ -248,22 +250,40 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""GamePlay"",
+            ""name"": ""GamePlayTeclado"",
             ""id"": ""3654572c-75ff-49ab-9f5a-e42abccd4074"",
             ""actions"": [
                 {
-                    ""name"": ""MovePc"",
+                    ""name"": ""MenuPc"",
                     ""type"": ""Button"",
-                    ""id"": ""a01119bb-5d2c-403c-9d0c-82313a2d9d7a"",
+                    ""id"": ""f9d6348c-bb62-4377-8035-4735f21d1968"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""ActionsPC"",
+                    ""name"": ""MovPc"",
+                    ""type"": ""Value"",
+                    ""id"": ""95d1e13b-db53-42fb-87a2-dc85203a7750"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""ActionPc"",
                     ""type"": ""Button"",
-                    ""id"": ""f9d6348c-bb62-4377-8035-4735f21d1968"",
+                    ""id"": ""c1fb2a7c-f070-4e84-aa02-95ae5c93731f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ActionPc2"",
+                    ""type"": ""Button"",
+                    ""id"": ""559f3efc-842f-4e63-b0ad-7489918fd5e5"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -273,56 +293,221 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""5ea70ffb-5a4b-4d61-bdea-ec186cf3c998"",
+                    ""id"": ""a05c05f8-c22c-4c6f-a1c5-54a7bd03a2e6"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""MenuPc"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Dir"",
+                    ""id"": ""7b17bc1c-e275-4faa-89bd-d8bb63270ebb"",
+                    ""path"": ""2DVector(mode=2)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovPc"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""188ffb83-851e-475b-a655-afdc9e3818fe"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MovePc"",
+                    ""action"": ""MovPc"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""d7dc47e1-f9b4-465a-8b85-80d8d0b2795a"",
+                    ""name"": ""down"",
+                    ""id"": ""f74d6d77-8a8f-4189-9307-3febdab541f6"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MovePc"",
+                    ""action"": ""MovPc"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""d516cce0-09ff-4266-8d89-5bb2609442d2"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MovePc"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f6a6bb40-c902-44dc-ac2b-8d298ffe6244"",
+                    ""name"": ""left"",
+                    ""id"": ""1e98b620-0964-4dc7-a7de-e5f5be58e35c"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MovePc"",
+                    ""action"": ""MovPc"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""76c83fa5-dc33-4719-a409-716433b52936"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovPc"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1f1f4a63-1363-44e7-8dc7-78a476b9a341"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ActionPc"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a05c05f8-c22c-4c6f-a1c5-54a7bd03a2e6"",
-                    ""path"": """",
+                    ""id"": ""3d39e3e9-4c53-4cb8-bdae-ef9db61b930b"",
+                    ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""ActionsPC"",
+                    ""action"": ""ActionPc2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""GamePlayGamePad"",
+            ""id"": ""4960b829-26b3-4dbe-b0aa-7f6ea6d6fb68"",
+            ""actions"": [
+                {
+                    ""name"": ""MenuGp"",
+                    ""type"": ""Button"",
+                    ""id"": ""70b6e02c-ecf0-4911-bbeb-bdbd8f142173"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MovGp"",
+                    ""type"": ""Value"",
+                    ""id"": ""d3a5d466-db06-43f5-8bc4-4e53bb586801"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""ActionGp"",
+                    ""type"": ""Button"",
+                    ""id"": ""6b4d3e1a-02c8-4ca3-9236-fe0453c9fcbc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ActionGp2"",
+                    ""type"": ""Button"",
+                    ""id"": ""b72ac8c6-1f90-4963-9bc9-a52fa33a84c6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""abe32e47-8c4c-46fa-9688-f6f936b6f267"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""MenuGp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Dir"",
+                    ""id"": ""8bc70140-f72c-4adb-9796-9d5727f48e36"",
+                    ""path"": ""2DVector(mode=2)"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovGp"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""95381b38-72b4-4a35-bb8c-4466187dd857"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovGp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""0dc626a5-83e7-4a3e-bd66-48232a6e7e8a"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovGp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""9b61fd91-9b4e-451d-8638-78db272e597e"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovGp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""81bf6b8b-9e19-44e5-a3f2-311ebe79532e"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MovGp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""be21a38b-6462-4fab-8a71-59083bd0e692"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ActionGp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""65e8a7f2-94de-441e-a936-e869189b3114"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ActionGp2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -352,10 +537,18 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
         m_MenuTeclado_Selection = m_MenuTeclado.FindAction("Selection", throwIfNotFound: true);
         m_MenuTeclado_Mov = m_MenuTeclado.FindAction("Mov", throwIfNotFound: true);
         m_MenuTeclado_Start = m_MenuTeclado.FindAction("Start", throwIfNotFound: true);
-        // GamePlay
-        m_GamePlay = asset.FindActionMap("GamePlay", throwIfNotFound: true);
-        m_GamePlay_MovePc = m_GamePlay.FindAction("MovePc", throwIfNotFound: true);
-        m_GamePlay_ActionsPC = m_GamePlay.FindAction("ActionsPC", throwIfNotFound: true);
+        // GamePlayTeclado
+        m_GamePlayTeclado = asset.FindActionMap("GamePlayTeclado", throwIfNotFound: true);
+        m_GamePlayTeclado_MenuPc = m_GamePlayTeclado.FindAction("MenuPc", throwIfNotFound: true);
+        m_GamePlayTeclado_MovPc = m_GamePlayTeclado.FindAction("MovPc", throwIfNotFound: true);
+        m_GamePlayTeclado_ActionPc = m_GamePlayTeclado.FindAction("ActionPc", throwIfNotFound: true);
+        m_GamePlayTeclado_ActionPc2 = m_GamePlayTeclado.FindAction("ActionPc2", throwIfNotFound: true);
+        // GamePlayGamePad
+        m_GamePlayGamePad = asset.FindActionMap("GamePlayGamePad", throwIfNotFound: true);
+        m_GamePlayGamePad_MenuGp = m_GamePlayGamePad.FindAction("MenuGp", throwIfNotFound: true);
+        m_GamePlayGamePad_MovGp = m_GamePlayGamePad.FindAction("MovGp", throwIfNotFound: true);
+        m_GamePlayGamePad_ActionGp = m_GamePlayGamePad.FindAction("ActionGp", throwIfNotFound: true);
+        m_GamePlayGamePad_ActionGp2 = m_GamePlayGamePad.FindAction("ActionGp2", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -538,59 +731,145 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
     }
     public MenuTecladoActions @MenuTeclado => new MenuTecladoActions(this);
 
-    // GamePlay
-    private readonly InputActionMap m_GamePlay;
-    private List<IGamePlayActions> m_GamePlayActionsCallbackInterfaces = new List<IGamePlayActions>();
-    private readonly InputAction m_GamePlay_MovePc;
-    private readonly InputAction m_GamePlay_ActionsPC;
-    public struct GamePlayActions
+    // GamePlayTeclado
+    private readonly InputActionMap m_GamePlayTeclado;
+    private List<IGamePlayTecladoActions> m_GamePlayTecladoActionsCallbackInterfaces = new List<IGamePlayTecladoActions>();
+    private readonly InputAction m_GamePlayTeclado_MenuPc;
+    private readonly InputAction m_GamePlayTeclado_MovPc;
+    private readonly InputAction m_GamePlayTeclado_ActionPc;
+    private readonly InputAction m_GamePlayTeclado_ActionPc2;
+    public struct GamePlayTecladoActions
     {
         private @Inputs m_Wrapper;
-        public GamePlayActions(@Inputs wrapper) { m_Wrapper = wrapper; }
-        public InputAction @MovePc => m_Wrapper.m_GamePlay_MovePc;
-        public InputAction @ActionsPC => m_Wrapper.m_GamePlay_ActionsPC;
-        public InputActionMap Get() { return m_Wrapper.m_GamePlay; }
+        public GamePlayTecladoActions(@Inputs wrapper) { m_Wrapper = wrapper; }
+        public InputAction @MenuPc => m_Wrapper.m_GamePlayTeclado_MenuPc;
+        public InputAction @MovPc => m_Wrapper.m_GamePlayTeclado_MovPc;
+        public InputAction @ActionPc => m_Wrapper.m_GamePlayTeclado_ActionPc;
+        public InputAction @ActionPc2 => m_Wrapper.m_GamePlayTeclado_ActionPc2;
+        public InputActionMap Get() { return m_Wrapper.m_GamePlayTeclado; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(GamePlayActions set) { return set.Get(); }
-        public void AddCallbacks(IGamePlayActions instance)
+        public static implicit operator InputActionMap(GamePlayTecladoActions set) { return set.Get(); }
+        public void AddCallbacks(IGamePlayTecladoActions instance)
         {
-            if (instance == null || m_Wrapper.m_GamePlayActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_GamePlayActionsCallbackInterfaces.Add(instance);
-            @MovePc.started += instance.OnMovePc;
-            @MovePc.performed += instance.OnMovePc;
-            @MovePc.canceled += instance.OnMovePc;
-            @ActionsPC.started += instance.OnActionsPC;
-            @ActionsPC.performed += instance.OnActionsPC;
-            @ActionsPC.canceled += instance.OnActionsPC;
+            if (instance == null || m_Wrapper.m_GamePlayTecladoActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_GamePlayTecladoActionsCallbackInterfaces.Add(instance);
+            @MenuPc.started += instance.OnMenuPc;
+            @MenuPc.performed += instance.OnMenuPc;
+            @MenuPc.canceled += instance.OnMenuPc;
+            @MovPc.started += instance.OnMovPc;
+            @MovPc.performed += instance.OnMovPc;
+            @MovPc.canceled += instance.OnMovPc;
+            @ActionPc.started += instance.OnActionPc;
+            @ActionPc.performed += instance.OnActionPc;
+            @ActionPc.canceled += instance.OnActionPc;
+            @ActionPc2.started += instance.OnActionPc2;
+            @ActionPc2.performed += instance.OnActionPc2;
+            @ActionPc2.canceled += instance.OnActionPc2;
         }
 
-        private void UnregisterCallbacks(IGamePlayActions instance)
+        private void UnregisterCallbacks(IGamePlayTecladoActions instance)
         {
-            @MovePc.started -= instance.OnMovePc;
-            @MovePc.performed -= instance.OnMovePc;
-            @MovePc.canceled -= instance.OnMovePc;
-            @ActionsPC.started -= instance.OnActionsPC;
-            @ActionsPC.performed -= instance.OnActionsPC;
-            @ActionsPC.canceled -= instance.OnActionsPC;
+            @MenuPc.started -= instance.OnMenuPc;
+            @MenuPc.performed -= instance.OnMenuPc;
+            @MenuPc.canceled -= instance.OnMenuPc;
+            @MovPc.started -= instance.OnMovPc;
+            @MovPc.performed -= instance.OnMovPc;
+            @MovPc.canceled -= instance.OnMovPc;
+            @ActionPc.started -= instance.OnActionPc;
+            @ActionPc.performed -= instance.OnActionPc;
+            @ActionPc.canceled -= instance.OnActionPc;
+            @ActionPc2.started -= instance.OnActionPc2;
+            @ActionPc2.performed -= instance.OnActionPc2;
+            @ActionPc2.canceled -= instance.OnActionPc2;
         }
 
-        public void RemoveCallbacks(IGamePlayActions instance)
+        public void RemoveCallbacks(IGamePlayTecladoActions instance)
         {
-            if (m_Wrapper.m_GamePlayActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_GamePlayTecladoActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IGamePlayActions instance)
+        public void SetCallbacks(IGamePlayTecladoActions instance)
         {
-            foreach (var item in m_Wrapper.m_GamePlayActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_GamePlayTecladoActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_GamePlayActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_GamePlayTecladoActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public GamePlayActions @GamePlay => new GamePlayActions(this);
+    public GamePlayTecladoActions @GamePlayTeclado => new GamePlayTecladoActions(this);
+
+    // GamePlayGamePad
+    private readonly InputActionMap m_GamePlayGamePad;
+    private List<IGamePlayGamePadActions> m_GamePlayGamePadActionsCallbackInterfaces = new List<IGamePlayGamePadActions>();
+    private readonly InputAction m_GamePlayGamePad_MenuGp;
+    private readonly InputAction m_GamePlayGamePad_MovGp;
+    private readonly InputAction m_GamePlayGamePad_ActionGp;
+    private readonly InputAction m_GamePlayGamePad_ActionGp2;
+    public struct GamePlayGamePadActions
+    {
+        private @Inputs m_Wrapper;
+        public GamePlayGamePadActions(@Inputs wrapper) { m_Wrapper = wrapper; }
+        public InputAction @MenuGp => m_Wrapper.m_GamePlayGamePad_MenuGp;
+        public InputAction @MovGp => m_Wrapper.m_GamePlayGamePad_MovGp;
+        public InputAction @ActionGp => m_Wrapper.m_GamePlayGamePad_ActionGp;
+        public InputAction @ActionGp2 => m_Wrapper.m_GamePlayGamePad_ActionGp2;
+        public InputActionMap Get() { return m_Wrapper.m_GamePlayGamePad; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(GamePlayGamePadActions set) { return set.Get(); }
+        public void AddCallbacks(IGamePlayGamePadActions instance)
+        {
+            if (instance == null || m_Wrapper.m_GamePlayGamePadActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_GamePlayGamePadActionsCallbackInterfaces.Add(instance);
+            @MenuGp.started += instance.OnMenuGp;
+            @MenuGp.performed += instance.OnMenuGp;
+            @MenuGp.canceled += instance.OnMenuGp;
+            @MovGp.started += instance.OnMovGp;
+            @MovGp.performed += instance.OnMovGp;
+            @MovGp.canceled += instance.OnMovGp;
+            @ActionGp.started += instance.OnActionGp;
+            @ActionGp.performed += instance.OnActionGp;
+            @ActionGp.canceled += instance.OnActionGp;
+            @ActionGp2.started += instance.OnActionGp2;
+            @ActionGp2.performed += instance.OnActionGp2;
+            @ActionGp2.canceled += instance.OnActionGp2;
+        }
+
+        private void UnregisterCallbacks(IGamePlayGamePadActions instance)
+        {
+            @MenuGp.started -= instance.OnMenuGp;
+            @MenuGp.performed -= instance.OnMenuGp;
+            @MenuGp.canceled -= instance.OnMenuGp;
+            @MovGp.started -= instance.OnMovGp;
+            @MovGp.performed -= instance.OnMovGp;
+            @MovGp.canceled -= instance.OnMovGp;
+            @ActionGp.started -= instance.OnActionGp;
+            @ActionGp.performed -= instance.OnActionGp;
+            @ActionGp.canceled -= instance.OnActionGp;
+            @ActionGp2.started -= instance.OnActionGp2;
+            @ActionGp2.performed -= instance.OnActionGp2;
+            @ActionGp2.canceled -= instance.OnActionGp2;
+        }
+
+        public void RemoveCallbacks(IGamePlayGamePadActions instance)
+        {
+            if (m_Wrapper.m_GamePlayGamePadActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        public void SetCallbacks(IGamePlayGamePadActions instance)
+        {
+            foreach (var item in m_Wrapper.m_GamePlayGamePadActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_GamePlayGamePadActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    public GamePlayGamePadActions @GamePlayGamePad => new GamePlayGamePadActions(this);
     private int m_KeyboardSchemeIndex = -1;
     public InputControlScheme KeyboardScheme
     {
@@ -621,9 +900,18 @@ public partial class @Inputs: IInputActionCollection2, IDisposable
         void OnMov(InputAction.CallbackContext context);
         void OnStart(InputAction.CallbackContext context);
     }
-    public interface IGamePlayActions
+    public interface IGamePlayTecladoActions
     {
-        void OnMovePc(InputAction.CallbackContext context);
-        void OnActionsPC(InputAction.CallbackContext context);
+        void OnMenuPc(InputAction.CallbackContext context);
+        void OnMovPc(InputAction.CallbackContext context);
+        void OnActionPc(InputAction.CallbackContext context);
+        void OnActionPc2(InputAction.CallbackContext context);
+    }
+    public interface IGamePlayGamePadActions
+    {
+        void OnMenuGp(InputAction.CallbackContext context);
+        void OnMovGp(InputAction.CallbackContext context);
+        void OnActionGp(InputAction.CallbackContext context);
+        void OnActionGp2(InputAction.CallbackContext context);
     }
 }

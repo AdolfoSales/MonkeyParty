@@ -12,28 +12,28 @@ public class OptionsSceneManager : SceneManagerBase
 
     private void SetButtons()
     {
-        buttonsYAxis[0].onClick.RemoveAllListeners();
-        buttonsYAxis[0].onClick.AddListener(
-            delegate ()
-            {
-                //GameManager.instance.LoadScene(SCENE.SELECTOR);
-            });
-        buttonsYAxis[1].onClick.RemoveAllListeners();
-        buttonsYAxis[1].onClick.AddListener(
-           delegate ()
-           {
+        //buttonsYAxis[0].onClick.RemoveAllListeners();
+        //buttonsYAxis[0].onClick.AddListener(
+        //    delegate ()
+        //    {
+        //        //GameManager.instance.LoadScene(SCENE.SELECTOR);
+        //    });
+        //buttonsYAxis[1].onClick.RemoveAllListeners();
+        //buttonsYAxis[1].onClick.AddListener(
+        //   delegate ()
+        //   {
                
-           });
-        buttonsYAxis[2].onClick.RemoveAllListeners();
-        buttonsYAxis[2].onClick.AddListener(
-            delegate ()
-            {
-                GameManager.instance.LoadScene(SCENE.MAIN);
-            });
+        //   });
+        //buttonsYAxis[2].onClick.RemoveAllListeners();
+        //buttonsYAxis[2].onClick.AddListener(
+        //    delegate ()
+        //    {
+        //        GameManager.instance.LoadScene(SCENE.MAIN);
+        //    });
     }
 
-    protected override void StartEnter()
-    {
-        //print("Start");
-    }
+    //protected override void StartEnter()
+    //{
+    //    //print("Start");
+    //}
 }

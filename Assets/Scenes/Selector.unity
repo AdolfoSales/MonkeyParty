@@ -421,6 +421,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 274791090950347339, guid: 91519afe0fd3936438b4cb02aa6289c0, type: 3}
+      propertyPath: menuGamePad
+      value: 
+      objectReference: {fileID: 4956873487347372903, guid: 464a061d1e17fb541af66b499fce42a1, type: 3}
+    - target: {fileID: 274791090950347339, guid: 91519afe0fd3936438b4cb02aa6289c0, type: 3}
+      propertyPath: menuKeyboard
+      value: 
+      objectReference: {fileID: 5575631745466143675, guid: b8a722593e68da04c82524a9c6f9aff4, type: 3}
     - target: {fileID: 754765442030766321, guid: 91519afe0fd3936438b4cb02aa6289c0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1632,6 +1640,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f9a60f541850641b0c5083b53d4241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pcPlayerMenuPrefab: {fileID: 6945302922571991176, guid: badd51a09ed71b544bfad8896b4493a3, type: 3}
+  gamePadPlayerMenuPrefab: {fileID: 4435214211522096145, guid: cd2d9f70914977a4ca71a8665935205c, type: 3}
   buttonsYAxis: []
   buttonsXAxis:
   - {fileID: 1117329618}
@@ -3295,8 +3305,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 216603313}
   - {fileID: 822684273}
+  - {fileID: 1094137565}
   - {fileID: 32622651}
   - {fileID: 568266352}
   - {fileID: 1669445539}
   - {fileID: 340357387}
-  - {fileID: 1094137565}

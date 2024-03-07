@@ -47,3 +47,5 @@ MonoBehaviour:
   maxPlayers: 4
   keyboardPlayerPrefab: {fileID: 5575631745466143675, guid: b8a722593e68da04c82524a9c6f9aff4, type: 3}
   gamePadPlayerPrefab: {fileID: 4956873487347372903, guid: 464a061d1e17fb541af66b499fce42a1, type: 3}
+  gamePlayGamePad: {fileID: 8035694034057617395, guid: 5be6e289789007f478c97975b0870fb1, type: 3}
+  gamePlayKeyboard: {fileID: 4956873487347372903, guid: 464a061d1e17fb541af66b499fce42a1, type: 3}

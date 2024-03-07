@@ -1,18 +1,19 @@
 
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+////clase que hereda de baseInput que se encargar de capturar input pàra un teclado que va ser usado en un menú.
 public class KeyboadInput : BaseInput
 {
     private Keyboard keyboard;
 
     //private Vector2 movementInput;
 
-    public void InitKeyboard(Keyboard _keyboard)
+    private void Awake()
     {
-        keyboard = _keyboard;
+        iNPUT = INPUT.KEYBOARD;
     }
 
+    //cuanbdo se crea el objeto me suscribo a los eventos
     private void OnEnable()
     {
         if (inputAction == null)
@@ -25,7 +26,7 @@ public class KeyboadInput : BaseInput
         }
     }
 
-
+    //cuandpo ME DESACTVo me desactivo de los eventos.
     private void OnDisable()
     {
         inputAction.MenuTeclado.Mov.performed -= Move;
@@ -34,43 +35,5 @@ public class KeyboadInput : BaseInput
         inputAction.Disable();
     }
 
-    //private void OnEnable()
-    //{
-    //    if (inputAction == null)
-    //    {
-    //        inputAction = new Inputs();
-    //        inputAction.Enable();
-    //        inputAction.Menu.Mov.performed += Move;
-    //        inputAction.Menu.Selection.performed += Enter;
-    //    }
-
-    //}
-
-
-    //private void OnDisable()
-    //{
-    //    inputAction.Menu.Mov.performed -= Move;
-    //    inputAction.Menu.Selection.performed -= Enter;
-    //    inputAction.Disable();
-    //}
-
-
-    //public override void Move(InputAction.CallbackContext context)
-    //{
-    //    print(context.valueType);
-    //    if (context.performed)
-    //    {
-    //        InputsActions.menuActionMove?.Invoke(context.ReadValue<Vector2>());
-    //    }
-    //}
-
-    //public override void Enter(InputAction.CallbackContext context)
-    //{
-    //    print(context.valueType);
-    //    if (context.performed)
-    //    { 
-    //        InputsActions.MenuActionEnter?.Invoke();
-    //    }
-    //}
 }
 
